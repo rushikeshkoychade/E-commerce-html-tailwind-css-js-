@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product-gallary</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="flex flex-wrap items-center justify-between p-3 bg-[#e8e8e5]">
+        <a href="file:///D:/kp/e-com/index.html" class="text-xl">Neha's Shop</a>
+        <div class="flex md:hidden">
+            <button id="hamburger">
+                <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png"
+                    width="40" height="40" />
+                <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png"
+                    width="40" height="40" />
+            </button>
+        </div>
+        <div class=" toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
+            <a href="file:///D:/kp/e-com/index.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Home
+            </a>
+            <a href="file:///D:/kp/e-com/product.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Our Products
+            </a>
+            <a href="file:///D:/kp/e-com/about.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">About us
+            </a>
+            <a href="file:///D:/kp/e-com/gallary.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Gallery
+            </a>
+            <a href="file:///D:/kp/e-com/contact.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Visit Us
+            </a>
+        </div>
+
+        <div class="toggle w-full text-end hidden md:flex md:w-auto px-2 py-2 md:rounded">
+            <a href="tel:+123">
+                <div class="flex justify-end space-x-4">
+                    <a href="file:///D:/kp/e-com/contact.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        Contact Us
+                    </a>
+                    <a href="file:///D:/kp/e-com/cart.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <i class="fa fa-cart-arrow-down"></i>
+                        Cart
+                    </a>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <!-- img  -->
+    <section class="bg-zinc-50 overflow-hidden">
+        <div
+            class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-svh flex flex-col justify-center">
+            <div class="flex flex-col sm:flex-row mx-auto" id="random-images-container"></div>
+            <!-- <div class="flex flex-col sm:flex-row mx-auto">
+                <img id="img-7" src="https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+                    alt="#_">
+                <img id="img-8" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&amp;w=2672&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
+                    class="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+                    alt="#_">
+                <img id="img-9" src="https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+                    alt="#_">
+                <img id="img-10" src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&amp;w=2574&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom"
+                    alt="#_">
+            </div> -->
+        </div>
+    </section>
+    <!-- gallar  -->
+    <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+            <div class="flex w-1/2 flex-wrap">
+                <div id="img-1" class="w-1/2 p-1 md:p-2">
+                    <img alt="gallery1" class="block h-full w-full rounded-lg object-cover object-center" src="" />
+                </div>
+                <div id="img-2" class="w-1/2 p-1 md:p-2">
+                    <img alt="gallery2" class="block h-full w-full rounded-lg object-cover object-center" src="" />
+                </div>
+                <div id="img-3" class="w-full p-1 md:p-2">
+                    <img alt="gallery3" class="block h-full w-full rounded-lg object-cover object-center" src="" />
+                </div>
+            </div>
+            <div class="flex w-1/2 flex-wrap">
+                <div id="img-4" class="w-full p-1 md:p-2">
+                    <img alt="gallery4" class="block h-full w-full rounded-lg object-cover object-center" src="" />
+                </div>
+                <div id="img-5" class="w-1/2 p-1 md:p-2">
+                    <img alt="gallery5" class="block h-full w-full rounded-lg object-cover object-center" src="" />
+                </div>
+                <div id="img-6" class="w-1/2 p-1 md:p-2">
+                    <img alt="gallery6" class="block h-full w-full rounded-lg object-cover object-center" src="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./gallary.js"></script>
+</body>
+
+</html>

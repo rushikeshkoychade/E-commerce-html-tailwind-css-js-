@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./index.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- nav bar section -->
+    <nav class="flex flex-wrap items-center justify-between p-3 bg-[#e8e8e5]">
+        <a href="file:///D:/kp/e-com/index.html" class="text-xl">Neha's Shop</a>
+        <div class="flex md:hidden">
+            <button id="hamburger">
+                <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png"
+                    width="40" height="40" />
+                <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png"
+                    width="40" height="40" />
+            </button>
+        </div>
+        <div class=" toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
+            <a href="file:///D:/kp/e-com/index.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Home
+            </a>
+            <a href="file:///D:/kp/e-com/product.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Our Products
+            </a>
+            <a href="file:///D:/kp/e-com/about.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">About us
+            </a>
+            <a href="file:///D:/kp/e-com/gallary.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Gallery
+            </a>
+            <a href="file:///D:/kp/e-com/contact.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Visit Us
+            </a>
+        </div>
+
+        <div class="toggle w-full text-end hidden md:flex md:w-auto px-2 py-2 md:rounded">
+            <a href="tel:+123">
+                <div class="flex justify-end space-x-4">
+                    <a href="file:///D:/kp/e-com/contact.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        Contact Us
+                    </a>
+                    <a href="file:///D:/kp/e-com/cart.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <i class="fa fa-cart-arrow-down"></i>
+                        Cart
+                    </a>
+                </div>
+            </a>
+        </div>
+
+    </nav>
+    <!-- hero seciton -->
+    <div class="relative w-full h-80 md:h-[660px]" id="home">
+        <div class="absolute inset-0 opacity-70">
+            <img src="https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?cs=srgb&dl=pexels-karolina-grabowska-5632371.jpg&fm=jpg"
+                alt="Background Image" class="object-cover object-center w-full h-full" />
+
+        </div>
+        <div class="absolute inset-9 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-4 md:mb-0">
+                <h1 class="text-grey-700 font-medium text-4xl md:text-5xl leading-tight mb-2">Neha's Shop</h1>
+                <p class="font-regular text-xl mb-8 mt-4">One stop solution for flour grinding services</p>
+                <a href="#contactUs"
+                    class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858]  transition duration-200">Contact
+                    Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel section -->
+    <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="relative w-full max-w-4xl mx-auto">
+            <!-- Carousel wrapper -->
+            <div class="overflow-hidden relative rounded-lg">
+                <div class="flex transition-transform duration-500 ease-in-out transform" id="carousel">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full">
+                        <img src="https://images01.nicepagecdn.com/page/10/99/website-template-preview-109962.jpg"
+                            alt="Slide 1" class="w-full h-full object-cover" />
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full">
+                        <img src="https://wpklik.com/wp-content/uploads/2020/08/Esmee-WordPress-Theme.jpg" alt="Slide 2"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="min-w-full">
+                        <img src="https://cdn.prod.website-files.com/6185b708a2657014268d2eaf/6204941a794503795772a4a1_combatant-gentlemen-menswear-ecommerce-site.png"
+                            alt="Slide 3" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button
+                class="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+                onclick="scrollCarousel(-1)">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button
+                class="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+                onclick="scrollCarousel(1)">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- why us  -->
+    <div>
+        <h3>Men's Wear</h3>
+        <div class="flex flex-col md:grid md:grid-cols-3 gap-4 mt-4 mb-3">
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHNoaXJ0fGVufDB8fHx8MTY4NTgzODU2Ng&ixlib=rb-1.2.1&q=80&w=400" alt="Shirts" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Shirts
+                </p>
+            </div>
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1503342452485-86a15b119d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHRzaGlydHxlbnwwfHx8fDE2ODU4Mzg1NjY&ixlib=rb-1.2.1&q=80&w=400" alt="T-shirts" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    T-shirts
+                </p>
+            </div>
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1560977685-0d52a4a2fa9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDh8fHRyb3VzZXJzfGVufDB8fHx8MTY4NTgzODU2Ng&ixlib=rb-1.2.1&q=80&w=400" alt="Trousers and Jeans" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Trousers and Jeans
+                </p>
+            </div>
+        </div>
+    
+        <h3>Women's Wear</h3>
+        <div class="flex flex-col md:grid md:grid-cols-3 gap-4 mt-4 mb-3">
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555529771-8d5d2c69aeb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI3fHx3b21lbnxlbnwwfHx8fDE2ODU4Mzg2MjQ&ixlib=rb-1.2.1&q=80&w=400" alt="Tops" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Tops
+                </p>
+            </div>
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1593031696458-440f820f2c9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGplYW5zfGVufDB8fHx8MTY4NTgzODY0MA&ixlib=rb-1.2.1&q=80&w=400" alt="Jeans and Leggings" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Jeans and Leggings
+                </p>
+            </div>
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551733097-0cf69f85d098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fGFjY2Vzc29yaWVzfGVufDB8fHx8MTY4NTgzODY2NA&ixlib=rb-1.2.1&q=80&w=400" alt="Accessories" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Accessories
+                </p>
+            </div>
+        </div>
+    
+        <h3>Electronics</h3>
+        <div class="flex flex-col md:grid md:grid-cols-3 gap-4 mt-4 mb-3">
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1561839561-fc1e7ff39987?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE0fHxzbWFydCUyMHdhdGNoZXN8ZW58MHx8fHwxNjg1ODM4NzEy&ixlib=rb-1.2.1&q=80&w=400" alt="Smart watches" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Smart watches
+                </p>
+            </div>
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1557161100-fb416112a978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNhc3VhbCUyMHdhdGNoZXN8ZW58MHx8fHwxNjg1ODM4NzM1&ixlib=rb-1.2.1&q=80&w=400" alt="Casual Watches" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition">
+                    Casual Watches
+                </p>
+            </div>
+            <div class="relative rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a5c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNvbGxlZ2UlMjB3YXRjaGVzfGVufDB8fHx8MTY4NTgzODc1Ng&ixlib=rb-1.2.1&q=80&w=400" alt="College Watches" class="w-full">
+                <p class="cursor-pointer absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover-bg-opacity-60 transition">
+                    College Watches
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Visit us section -->
+    <section class="bg-gray-100">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-20 lg:px-8">
+            <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900" id="contactUs">Visit Our Location</h2>
+                <p class="mt-3 text-lg text-gray-500">Let us serve you the best</p>
+            </div>
+            <div class="mt-8 lg:mt-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+                            <div class="border-t border-gray-200 px-6 py-4">
+                                <h3 class="text-lg font-bold text-gray-900">Contact</h3>
+                                <p class="mt-1 font-bold text-gray-600"><a href="tel:+123">Phone: +91
+                                        123456789</a></p>
+                                <a class="flex m-1" href="tel:+919823331842">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="flex items-center justify-between h-10 w-30 rounded-md bg-indigo-500 text-white p-2">
+                                            <!-- Heroicon name: phone -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                            </svg>
+                                            Contact Us
+                                        </div>
+                                    </div>
+
+                                </a>
+                            </div>
+                            <div class="px-6 py-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Address</h3>
+                                <p class="mt-1 text-gray-600">Sale galli, 60 foot road, Latur</p>
+                            </div>
+                            <div class="border-t border-gray-200 px-6 py-4">
+                                <h3 class="text-lg font-medium text-gray-900">Hours</h3>
+                                <p class="mt-1 text-gray-600">Monday - Sunday : 2pm - 9pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden order-none sm:order-first">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.7850672491236!2d76.58802159999999!3d18.402630699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf83ca88e84341%3A0x841e547bf3ad066d!2zQmFwcGEgZmxvdXIgbWlsbCB8IOCkrOCkquCljeCkquCkviDgpKrgpYDgpKAg4KSX4KS_4KSw4KSj4KWALCDgpK7gpL_gpLDgpJrgpYAg4KSV4KS-4KSC4KSh4KSqIOCkhuCko-CkvyDgpLbgpYfgpLXgpL7gpK_gpL4!5e0!3m2!1sen!2sin!4v1713433597892!5m2!1sen!2sin"
+                            class="w-full" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <section>
+        <footer class="bg-gray-200 text-white py-4 px-3">
+            <div class="container mx-auto flex flex-wrap items-center justify-between">
+                <div class="w-full md:w-1/2 md:text-center md:mb-4 mb-8">
+                    <p class="text-xs text-gray-400 md:text-sm">Copyright 2024 &copy; All Rights Reserved</p>
+                </div>
+                <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
+                    <ul class="list-reset flex justify-center flex-wrap text-xs md:text-sm gap-3">
+                        <li><a href="#contactUs" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li class="mx-4"><a href="/privacy" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </section>
+    </div>
+    <script src="./carousel.js"></script>
+    <script src="./index.js"></script>
+
+</html>
