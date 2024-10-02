@@ -288,9 +288,9 @@ function filterProductsByCategoryAndPrice(
                           <div class="font-bold text-lg text-gray-900 mt-4">${
                             product.Price
                           } <i class="fa fa-rupee" style="font-size:18px"></i></div>
-                          <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none focus:bg-yellow-600 disabled:opacity-50 disabled:pointer-events-none my-2" onclick="window.location.href='productDetail.html?id=${
-                            product.ID
-                          }'">See details</button>
+                          <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none focus:bg-yellow-600 disabled:opacity-50 disabled:pointer-events-none my-2" 
+                          onclick="window.location.href='productDetail.html?id=${product.ID}'">
+                          See details</button>
                       </div>
                   </div>
               </div>
