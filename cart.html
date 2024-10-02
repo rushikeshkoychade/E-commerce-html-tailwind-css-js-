@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,140 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
+
 <body>
-    <a href="file:///D:/kp/e-com/index.html">Back button</a>
+    <nav class="flex flex-wrap items-center justify-between p-3 bg-[#e8e8e5]">
+        <a href="file:///D:/kp/e-com/index.html" class="text-xl">Neha's Shop</a>
+        <div class="flex md:hidden">
+            <button id="hamburger">
+                <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png"
+                    width="40" height="40" />
+                <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png"
+                    width="40" height="40" />
+            </button>
+        </div>
+        <div class=" toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
+            <a href="file:///D:/kp/e-com/index.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Home
+            </a>
+            <a href="file:///D:/kp/e-com/product.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Our Products
+            </a>
+            <a href="file:///D:/kp/e-com/about.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">About us
+            </a>
+            <a href="file:///D:/kp/e-com/gallary.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Gallery
+            </a>
+            <a href="file:///D:/kp/e-com/category.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Category
+            </a>
+        </div>
+
+        <div class="toggle w-full text-end hidden md:flex md:w-auto px-2 py-2 md:rounded">
+            <a href="tel:+123">
+                <div class="flex justify-end space-x-4">
+                    <a href="file:///D:/kp/e-com/contact.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        Contact Us
+                    </a>
+                    <a href="file:///D:/kp/e-com/cart.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <i class="fa fa-cart-arrow-down"></i>
+                        Cart
+                    </a>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div class="container mx-auto">
+        <div class="sm:flex shadow-md my-10">
+            <div class="  w-full  sm:w-3/4 bg-white px-10 py-10">
+                <div class="flex justify-between border-b pb-8">
+                    <h1 class="font-semibold text-2xl">Shopping Cart</h1>
+                    <h2 class="font-semibold text-2xl">3 Items</h2>
+                </div>
+                <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
+                    <div class="md:w-4/12 2xl:w-1/4 w-full">
+                        <img src="https://i.ibb.co/6gzWwSq/Rectangle-20-1.png" alt="Black Leather Purse"
+                            class="h-full object-center object-cover md:block hidden" />
+                        <img src="https://i.ibb.co/TTnzMTf/Rectangle-21.png" alt="Black Leather Purse"
+                            class="md:hidden w-full h-full object-center object-cover" />
+                    </div>
+                    <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
+                        <p class="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
+                        <div class="flex items-center justify-between w-full">
+                            <p class="text-base font-black leading-none text-gray-800">Luxe card holder</p>
+                            <select aria-label="Select quantity"
+                                class="py-2 px-1 border border-gray-200 mr-6 focus:outline-none">
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                        </div>
+                        <p class="text-xs leading-3 text-gray-600 pt-2">Height: 10 inches</p>
+                        <p class="text-xs leading-3 text-gray-600 py-4">Color: Black</p>
+                        <p class="w-96 text-xs leading-3 text-gray-600">Composition: 100% calf leather</p>
+                        <div class="flex items-center justify-between pt-5">
+                            <div class="flex itemms-center">
+                                <p class="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p>
+                                <p class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">Remove</p>
+                            </div>
+                            <p class="text-base font-black leading-none text-gray-800">,000</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="file:///D:/kp/e-com/product.html" class="flex font-semibold text-indigo-600 text-sm mt-10">
+                    <svg class="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512">
+                        <path
+                            d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+                    </svg>
+                    Continue Shopping
+                </a>
+            </div>
+            <div id="summary" class=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10">
+                <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
+                <div class="flex justify-between mt-10 mb-5">
+                    <span class="font-semibold text-sm uppercase">Items 3</span>
+                    <span class="font-semibold text-sm">590$</span>
+                </div>
+                <div>
+                    <label class="font-medium inline-block mb-3 text-sm uppercase">
+                        Shipping
+                    </label>
+                    <select class="block p-2 text-gray-600 w-full text-sm">
+                        <option>Standard shipping - $10.00</option>
+                    </select>
+                </div>
+                <div class="py-10">
+                    <label for="promo" class="font-semibold inline-block mb-3 text-sm uppercase">
+                        Promo Code
+                    </label>
+                    <input type="text" id="promo" placeholder="Enter your code" class="p-2 text-sm w-full" />
+                </div>
+                <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">
+                    Apply
+                </button>
+                <div class="border-t mt-8">
+                    <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+                        <span>Total cost</span>
+                        <span>$600</span>
+                    </div>
+                    <button
+                        class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

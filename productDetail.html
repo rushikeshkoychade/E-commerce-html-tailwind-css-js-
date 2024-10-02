@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
             </a>
             <a href="#gallery" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Gallery
             </a>
-            <a href="#contactUs" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Visit Us
+            <a href="#contactUs" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Category
             </a>
         </div>
 
@@ -54,95 +53,62 @@
         </div>
     </nav>
 
-    <main class="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
-        <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
-            <div class="container mx-auto px-6 flex relative py-16">
-                <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20">
-                    <h1
-                        class="font-bebas-neue uppercase text-6xl sm:text-5xl font-black flex flex-col leading-none dark:text-white text-gray-800">
-                        <!-- Product Name will be inserted here -->
-                    </h1>
-                    <p class="text-sm sm:text-base text-gray-700 dark:text-white">
-                        <!-- Product Description will be inserted here -->
-                    </p>
-                    <div class="flex mt-8">
-                        <!-- Product Category will be inserted here -->
-                    </div>
+    <div class="w-full flex items-center justify-center">
+        <div class="w-full px-6 max-w-[1200px]">
+            <main class="dark:bg-gray-800 bg-white relative overflow-hidden h-full">
+                <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+                    <div class="container mx-auto px-6 flex flex-col md:flex-row relative">
+                        <div class="w-full md:w-2/3 flex flex-col relative z-20 mt-16 h-[70vh]">
+                            <h1 id="product-name"
+                                class="font-bebas-neue uppercase text-6xl sm:text-5xl font-black flex flex-col leading-none dark:text-white text-gray-800">
+                                Product Name
+                            </h1>
+                            <p id="product-description" class="text-sm sm:text-base text-gray-700 dark:text-white">
+                                Product description will go here.
+                            </p>
 
-                    <!-- Quantity Controls -->
-                    <div class="flex items-center mt-8">
-                        <span class="text-gray-700 dark:text-white mr-4">Quantity:</span>
-                        <button id="decreaseQuantity"
-                            class="bg-red-500 text-white py-1 px-2 rounded-md hover:bg-red-600 focus:outline-none">
-                            -
-                        </button>
-                        <span id="quantity" class="mx-4 text-lg text-gray-700 dark:text-white">1</span>
-                        <button id="increaseQuantity"
-                            class="bg-green-500 text-white py-1 px-2 rounded-md hover:bg-green-600 focus:outline-none">
-                            +
-                        </button>
-                    </div>
+                            <div class="mt-4 text-lg text-gray-700 dark:text-white">
+                                <span id="product-category">Category: </span>
+                            </div>
+                            <div class="mt-4 text-lg text-gray-700 dark:text-white">
+                                <span id="product-rating">Rating: </span>
+                            </div>
+                            <div class="mt-4 text-lg text-gray-700 dark:text-white">
+                                <span id="product-price">Price: </span>
+                            </div>
 
-                    <!-- Size Selection as Radio Buttons -->
-                    <div class="mt-8">
-                        <span class="text-gray-700 dark:text-white">Choose Size:</span>
-                        <div class="flex items-center space-x-4 mt-2">
-                            <label>
-                                <input type="radio" name="size" value="S" class="hidden peer">
-                                <div
-                                    class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 peer-checked:bg-yellow-500 peer-checked:border-yellow-500 text-gray-700 dark:text-white peer-checked:text-white cursor-pointer">
-                                    S
-                                </div>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="M" class="hidden peer">
-                                <div
-                                    class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 peer-checked:bg-yellow-500 peer-checked:border-yellow-500 text-gray-700 dark:text-white peer-checked:text-white cursor-pointer">
-                                    M
-                                </div>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="L" class="hidden peer">
-                                <div
-                                    class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 peer-checked:bg-yellow-500 peer-checked:border-yellow-500 text-gray-700 dark:text-white peer-checked:text-white cursor-pointer">
-                                    L
-                                </div>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="XL" class="hidden peer">
-                                <div
-                                    class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 peer-checked:bg-yellow-500 peer-checked:border-yellow-500 text-gray-700 dark:text-white peer-checked:text-white cursor-pointer">
-                                    XL
-                                </div>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="2XL" class="hidden peer">
-                                <div
-                                    class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 peer-checked:bg-yellow-500 peer-checked:border-yellow-500 text-gray-700 dark:text-white peer-checked:text-white cursor-pointer">
-                                    2XL
-                                </div>
-                            </label>
+                            <!-- Quantity and Size Options -->
+                            <div class="flex items-center mt-8">
+                                <span class="text-gray-700 dark:text-white mr-4">Quantity:</span>
+                                <button id="decreaseQuantity"
+                                    class="bg-red-500 text-white py-1 px-2 rounded-md hover:bg-red-600 focus:outline-none">-</button>
+                                <span id="quantity" class="mx-4 text-lg text-gray-700 dark:text-white">1</span>
+                                <button id="increaseQuantity"
+                                    class="bg-green-500 text-white py-1 px-2 rounded-md hover:bg-green-600 focus:outline-none">+</button>
+                            </div>
+
+                            <!-- Add to Cart and Buy Now buttons -->
+                            <div class="mt-8">
+                                <a href="#" onclick="addToCart()"
+                                    class="uppercase py-2 px-4 rounded-lg bg-yellow-500 border-2 border-transparent text-white text-md mr-4 hover:bg-yellow-400">
+                                    Add to Cart
+                                </a>
+                                <a href="#" onclick="buyNow()"
+                                    class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 dark:text-white hover:bg-yellow-500 hover:text-white text-md">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hidden sm:block w-full md:/3 relative h-full">
+                            <div id="product-image"></div> <!-- Added a div to show the product image -->
                         </div>
                     </div>
-
-                    <!-- Add to Cart and Buy Now Buttons -->
-                    <div class="mt-8">
-                        <a href="#" onclick="addToCart()"
-                            class="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400">
-                            Add to Cart
-                        </a>
-                        <a href="#" onclick="buyNow()"
-                            class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md">
-                            Buy Now
-                        </a>
-                    </div>
                 </div>
-                <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
-                    <img src="" alt="Product Image" class="max-w-xs md:max-w-sm m-auto" />
-                </div>
-            </div>
+            </main>
         </div>
-    </main>
+    </div>
+
+
     <script src="./productDetails.js"></script>
 </body>
 

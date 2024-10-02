@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -34,15 +33,16 @@
             <a href="file:///D:/kp/e-com/gallary.html"
                 class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Gallery
             </a>
-            <a href="file:///D:/kp/e-com/contact.html"
-                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Visit Us
+            <a href="file:///D:/kp/e-com/category.html"
+                class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Category
             </a>
         </div>
 
         <div class="toggle w-full text-end hidden md:flex md:w-auto px-2 py-2 md:rounded">
             <a href="tel:+123">
                 <div class="flex justify-end space-x-4">
-                    <a href="file:///D:/kp/e-com/contact.html" class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                    <a href="file:///D:/kp/e-com/contact.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
                         <!-- Heroicon name: phone -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -51,7 +51,8 @@
                         </svg>
                         Contact Us
                     </a>
-                    <a href="file:///D:/kp/e-com/cart.html" class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                    <a href="file:///D:/kp/e-com/cart.html"
+                        class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
                         <!-- Heroicon name: phone -->
                         <i class="fa fa-cart-arrow-down"></i>
                         Cart
@@ -61,14 +62,16 @@
         </div>
 
     </nav>
-    <section class="py-10" id="services">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="product-grid">
-                <!-- Product cards will be dynamically generated here -->
-            </div>
+    <div class="w-full flex items-center justify-center">
+        <div class="w-full px-6 max-w-[1360px]">
+            <section class="py-10" id="services">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Products</h2>
+                    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+            </section>
         </div>
-    </section>
+    </div>
     <script src="./product.js"></script>
 </body>
 

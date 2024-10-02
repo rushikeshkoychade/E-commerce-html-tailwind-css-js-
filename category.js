@@ -1,3 +1,14 @@
+const categories = [
+  "mens shirt",
+  "mens t-shirt",
+  "mens trousers&jeans",
+  "woman top",
+  "woman jeans&leggings",
+  "woman accessories",
+  "smart-watch",
+  "collage-watch",
+  "casual-watch",
+];
 const products = [
   {
     ID: 1,
@@ -86,7 +97,7 @@ const products = [
     ID: 10,
     Name: "shirt",
     Price: null,
-    Category: "mens top",
+    Category: "woman top",
     Rating: 4.5,
     Image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/p/5/h/m-0121-sh69-05-the-indian-garage-co-original-imagmhj2epajxfqa.jpeg?q=70",
@@ -129,7 +140,7 @@ const products = [
   },
   {
     ID: 15,
-    Name: "t-shirt",
+    Name: "pant",
     Price: 799,
     Category: "woman jeans&legins",
     Rating: 4.5,
@@ -147,7 +158,7 @@ const products = [
   },
   {
     ID: 17,
-    Name: "t-shirt",
+    Name: "pant",
     Price: 400,
     Category: "womans top",
     Rating: 4.7,
@@ -156,7 +167,7 @@ const products = [
   },
   {
     ID: 18,
-    Name: "t-shirt",
+    Name: "jeans",
     Price: 599,
     Category: "womans accessories",
     Rating: 3.5,
@@ -165,7 +176,7 @@ const products = [
   },
   {
     ID: 19,
-    Name: "t-shirt",
+    Name: "jeans",
     Price: 899,
     Category: "womans accessories",
     Rating: 4.5,
@@ -174,7 +185,7 @@ const products = [
   },
   {
     ID: 20,
-    Name: "t-shirt",
+    Name: "jeans",
     Price: 399,
     Category: "smart-watch",
     Rating: 4.4,
@@ -183,7 +194,7 @@ const products = [
   },
   {
     ID: 21,
-    Name: "t-shirt",
+    Name: "jeans",
     Price: 567,
     Category: "collage-watch",
     Rating: 4.1,
@@ -219,36 +230,99 @@ const products = [
   },
 ];
 
-// Function to display products dynamically
-function displayProducts(products) {
-  // Get the container where products will be displayed
-  const productGrid = document.getElementById('product-grid');
-  
-  // Clear any existing content in the container
-  productGrid.innerHTML = '';
+const categorySelect = document.getElementById("category-select");
+categories.forEach((category) => {
+  const option = document.createElement("option");
+  option.value = category;
+  option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+  categorySelect.appendChild(option);
+});
 
-  // Loop through each product and create product cards
-  products.forEach((product) => {
+// Function to filter products by category and price
+function filterProductsByCategoryAndPrice(
+  selectedCategory,
+  selectedPriceRange
+) {
+  const productGrid = document.getElementById("product-grid");
+  productGrid.innerHTML = ""; // Clear previous products
+
+  const filteredProducts = products.filter((product) => {
+    // Check if the product category matches the selected category
+    const matchesCategory =
+      selectedCategory === "Select your category" ||
+      product.Category.toLowerCase() === selectedCategory.toLowerCase();
+
+    // Check if the product price matches the selected price range
+    const matchesPrice = filterByPrice(product.Price, selectedPriceRange);
+
+    return matchesCategory && matchesPrice;
+  });
+
+  if (filteredProducts.length === 0) {
+    productGrid.innerHTML =
+      "<p>No products found. Please adjust your filters.</p>";
+    return;
+  }
+
+  // Display filtered products
+  filteredProducts.forEach((product) => {
     const productCard = `
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <div class="transition-all duration-300 hover:scale-110">
-          <img src="${product.Image || 'path_to_placeholder_image.jpg'}" alt="${product.Name}" class="w-full h-64 object-cover">
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-medium text-gray-800 mb-2 line-clamp-1 uppercase">${product.Name}</h3>
-            <p class="text-gray-700 text-base line-clamp-4">${product.Description || "No description available"}</p>
-            <div class="text-gray-600 font-semibold text-lg capitalize">Category: ${product.Category}</div>
-            <div class="font-bold text-lg text-gray-900 mt-4">Rating: ${product.Rating}/5</div>
-            <div class="font-bold text-lg text-gray-900 mt-4">${product.Price !== null ? product.Price : "Price not available"} <i class="fa fa-rupee" style="font-size:18px"></i></div>
-            <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none focus:bg-yellow-600 disabled:opacity-50 disabled:pointer-events-none my-2" onclick="window.location.href='productDetail.html?id=${product.ID}'">See details</button>
-          </div>
-        </div>
-      </div>
-    `;
-
-    // Append each product card to the product grid
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div class="transition-all duration-300 hover:scale-110">
+                      <img src="${product.Image}" alt="${
+      product.Name
+    }" class="w-full h-64 object-cover">
+                      <div class="p-6 text-center">
+                          <h3 class="text-xl font-medium text-gray-800 mb-2 line-clamp-1 uppercase">${
+                            product.Name
+                          }</h3>
+                          <p class="text-gray-700 text-base line-clamp-4">${
+                            product.Description || "No description available"
+                          }</p>
+                          <div class="text-gray-600 font-semibold text-lg capitalize">Category: ${
+                            product.Category
+                          }</div>
+                          <div class="font-bold text-lg text-gray-900 mt-4">Rating: ${
+                            product.Rating
+                          }/5</div>
+                          <div class="font-bold text-lg text-gray-900 mt-4">${
+                            product.Price
+                          } <i class="fa fa-rupee" style="font-size:18px"></i></div>
+                          <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none focus:bg-yellow-600 disabled:opacity-50 disabled:pointer-events-none my-2" onclick="window.location.href='productDetail.html?id=${
+                            product.ID
+                          }'">See details</button>
+                      </div>
+                  </div>
+              </div>
+          `;
     productGrid.innerHTML += productCard;
   });
 }
 
-// Call the function to display products
-displayProducts(products);
+// Function to filter by price
+function filterByPrice(price, range) {
+  if (range === "all") return true;
+  if (!price) return false;
+
+  const [min, max] = range.split("-").map(Number);
+  if (range === "1500") return price >= 1500;
+  return price >= min && price <= (max || Infinity);
+}
+
+// Event listeners for filters
+categorySelect.addEventListener("change", updateFilters);
+document.querySelectorAll('input[name="price"]').forEach((radio) => {
+  radio.addEventListener("change", updateFilters);
+});
+
+// Function to update filters and display products
+function updateFilters() {
+  const selectedCategory = categorySelect.value;
+  const selectedPriceRange = document.querySelector(
+    'input[name="price"]:checked'
+  ).value;
+  filterProductsByCategoryAndPrice(selectedCategory, selectedPriceRange);
+}
+
+// Initial display of all products
+updateFilters();
