@@ -253,3 +253,4 @@ function displayProductDetails() {
 
 // Call the function to display product details when the page loads
 window.onload = displayProductDetails;
+
